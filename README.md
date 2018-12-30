@@ -16,6 +16,8 @@ b) Spring Cloud Bus: An event bus for linking services and service instances tog
 c) Spring Cloud OpenFeign: Spring Cloud OpenFeign provides integrations for Spring Boot apps through autoconfiguration and binding to the Spring Environment and other Spring programming model idioms.
 
 d )Spring Cloud Netflix: Integration with various Netflix OSS components (Eureka, Hystrix, Zuul, Archaius, etc.)
+         i) Eureka: This is a Naming Server. All microservices will be registered on Eureka server.
+        ii) Zuul : This is an API Gateway. It uses for Security, Rate Limits, Fault Tolerance, Service Aggregation.
 
 e) Spring Cloud Sleuth: Distributed tracing for Spring Cloud applications, compatible with Zipkin, HTrace and log-based (e.g. ELK) tracing.
 
