@@ -11,8 +11,47 @@ Design microservice with Spring Boot and Spring Cloud----
 
 # URLs
 
+<table>
+   <tr>
+      <td>
+         Application
+      </td>      
+      <td>
+         URL
+      </td>
+   </tr>
+   
+   <tr>
+      <td>
+         Spring Cloud Config Server
+      </td>      
+      <td>
+         
+http://localhost:8888/customer-service-mysql/dev,
+http://localhost:8888/customer-service-mysql/test,
+http://localhost:8888/customer-service-mysql/stage,
+http://localhost:8888/customer-service-mysql/prod
+      </td>
+   </tr>
+</table>
 
 
+Customer Service - Direct Call
+http://localhost:8080/api/customer, http://localhost:8081/api/customer
+Customer Account Service
+http://localhost:8100/api/v1/customer
+Customer Account Service – Feign
+http://localhost:8100/api/v1/customer-feign
+Eureka
+http://localhost:8761/
+Zuul – Customer Account Service
+http://localhost:8765/customer-account-mysql/api/v1/customer-feign
+Zuul – Customer Service
+http://localhost:8765/customer-service-mysql/api/customer
+Zipkin
+http://localhost:9411/zipkin/
+Spring Cloud Bus Refresh
+http://localhost:8080/bus/refresh
 
 
 
