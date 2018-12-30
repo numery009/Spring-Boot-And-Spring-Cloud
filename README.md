@@ -8,6 +8,68 @@ Design microservice with Spring Boot and Spring Cloud----
 4) Distibuted Tracing with Zipkin.
 5) Fault Tolerance with Hystrix.
 
+# Ports
+
+<table>
+   <tr>
+      <td>
+         Application
+      </td>      
+      <td>
+         Ports
+      </td>
+   </tr>    
+   <tr>
+      <td>
+         Spring Cloud Config Server
+      </td>      
+      <td>
+         8888
+      </td>
+   </tr> 
+
+   <tr>
+      <td>
+         Customer Service
+      </td>      
+      <td>
+         8080, 8081, ..
+      </td>
+   </tr> 
+   <tr>
+      <td>
+         Customer Account Service
+      </td>      
+      <td>
+         8100, ...
+      </td>
+   </tr> 
+   <tr>
+      <td>
+         Netflix Eureka Naming Server
+      </td>      
+      <td>
+         8761
+      </td>
+   </tr> 
+   <tr>
+      <td>
+         Netflix Zuul API Gateway Server
+      </td>      
+      <td>
+         8765
+      </td>
+   </tr> 
+   <tr>
+      <td>
+         Zipkin Distributed Tracing Server
+      </td>      
+      <td>
+         9411
+      </td>
+   </tr>    
+<table>
+
 
 # URLs
 
