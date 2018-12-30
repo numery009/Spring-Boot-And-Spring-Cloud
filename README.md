@@ -8,6 +8,22 @@ Design microservice with Spring Boot and Spring Cloud----
 4) Distibuted Tracing with Zipkin.
 5) Fault Tolerance with Hystrix.
 
+
+a) Spring Cloud Config Server: Centralized external configuration management backed by a git repository. The configuration resources map directly to Spring Environment but could be used by non-Spring applications if desired.
+
+b) Spring Cloud Bus: An event bus for linking services and service instances together with distributed messaging. Useful for propagating state changes across a cluster (e.g. config change events).
+
+c) Spring Cloud OpenFeign: Spring Cloud OpenFeign provides integrations for Spring Boot apps through autoconfiguration and binding to the Spring Environment and other Spring programming model idioms.
+
+d )Spring Cloud Netflix: Integration with various Netflix OSS components (Eureka, Hystrix, Zuul, Archaius, etc.)
+
+e) Spring Cloud Sleuth: Distributed tracing for Spring Cloud applications, compatible with Zipkin, HTrace and log-based (e.g. ELK) tracing.
+
+f) Spring Cloud Security: Provides support for load-balanced OAuth2 rest client and authentication header relays in a Zuul proxy.
+
+
+
+
 # Ports
 
 <table>
