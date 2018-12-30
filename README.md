@@ -17,9 +17,11 @@ Design microservice with Spring Boot and Spring Cloud----
 Quick Start Page
 
 https://zipkin.io/pages/quickstart
+
 Downloading Zipkin Jar
 
 https://search.maven.org/remote_content?g=io.zipkin.java&a=zipkin-server&v=LATEST&c=exec
+
 Command to run
 
 RABBIT_URI=amqp://localhost java -jar zipkin-server-2.5.2-exec.jar
