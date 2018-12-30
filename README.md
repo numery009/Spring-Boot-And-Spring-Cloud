@@ -19,41 +19,83 @@ Design microservice with Spring Boot and Spring Cloud----
       <td>
          URL
       </td>
-   </tr>
-   
+   </tr>   
    <tr>
       <td>
          Spring Cloud Config Server
       </td>      
-      <td>
-         
+      <td>         
 http://localhost:8888/customer-service-mysql/dev,
 http://localhost:8888/customer-service-mysql/test,
 http://localhost:8888/customer-service-mysql/stage,
 http://localhost:8888/customer-service-mysql/prod
       </td>
+   </tr>   
+   <tr>
+      <td>
+         Customer Service - Direct Call
+      </td>      
+      <td>
+         http://localhost:8080/api/customer, http://localhost:8081/api/customer
+      </td>
    </tr>
+    <tr>
+      <td>
+         Customer Account Service
+      </td>      
+      <td>
+         http://localhost:8100/api/v1/customer
+      </td>
+   </tr>   
+    <tr>
+      <td>
+         Customer Account Service – Feign
+      </td>      
+      <td>
+         http://localhost:8100/api/v1/customer-feign
+      </td>
+   </tr>   
+    <tr>
+      <td>
+         Eureka
+      </td>      
+      <td>
+         http://localhost:8761/
+      </td>
+   </tr>   
+   <tr>
+      <td>
+         Zuul – Customer Account Service
+      </td>      
+      <td>
+         http://localhost:8765/customer-account-mysql/api/v1/customer-feign
+      </td>
+   </tr>   
+   <tr>
+      <td>
+         Zuul – Customer Service
+      </td>      
+      <td>
+         http://localhost:8765/customer-service-mysql/api/customer
+      </td>
+   </tr>   
+   <tr>
+      <td>
+         Zipkin
+      </td>      
+      <td>
+         http://localhost:9411/zipkin/
+      </td>
+   </tr>   
+   <tr>
+      <td>
+         Spring Cloud Bus Refresh
+      </td>      
+      <td>
+         http://localhost:8080/bus/refresh
+      </td>
+   </tr>   
 </table>
-
-
-Customer Service - Direct Call
-http://localhost:8080/api/customer, http://localhost:8081/api/customer
-Customer Account Service
-http://localhost:8100/api/v1/customer
-Customer Account Service – Feign
-http://localhost:8100/api/v1/customer-feign
-Eureka
-http://localhost:8761/
-Zuul – Customer Account Service
-http://localhost:8765/customer-account-mysql/api/v1/customer-feign
-Zuul – Customer Service
-http://localhost:8765/customer-service-mysql/api/customer
-Zipkin
-http://localhost:9411/zipkin/
-Spring Cloud Bus Refresh
-http://localhost:8080/bus/refresh
-
-
 
 
 
