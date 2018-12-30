@@ -65,12 +65,21 @@ http://localhost:8888/customer-service-mysql/prod
    </tr>   
    <tr>
       <td>
-         Zuul – Customer Account Service
+         Zuul – Customer Account Service Feign
       </td>      
       <td>
          http://localhost:8765/customer-account-mysql/api/v1/customer-feign
       </td>
-   </tr>   
+   </tr>  
+   
+   <tr>
+      <td>
+         Zuul – Customer Account Service 
+      </td>      
+      <td>
+         http://localhost:8765/customer-account-mysql/api/v1/customer
+      </td>
+   </tr>  
    <tr>
       <td>
          Zuul – Customer Service
