@@ -207,9 +207,29 @@ RABBIT_URI=amqp://localhost java -jar zipkin-server-2.5.2-exec.jar
 Install and Download -- https://www.rabbitmq.com/download.html
 
 # Distributed Tracing
+ In the microservices architerture we need to have the distributed tracing for debugging or find out where the error is.
+         1) Spring Cloud Sleuth- It will assign a unique ID to all the request.
+         2) Zipkin- It is a distributed tracing system.
+ 
+ How does it work?: All the logs of the all microserivices we will sent to the Zipkin Server through the RabbitMQ. Zipkin                       server will be the centrlize logging server where we can track any request. In the RabbitMQ Exchange,                       Queue and Interception of Messages are set by Spring Boot Auto Configuration - Both in Server and the                       Client.
+ 
+ 
 
 # Feign
+      It is basically uses to call other micro services. It is basically makes easire to call other microservices. 
+      To add Feign need to do the following steps--
+      1) Add the dependency of the OpenFeign.
+      2) @RnableFeignClients("Package") (with "package")
+      3) Create a Feign Proxy which will contain the service-name, URL, verb of the URL, methodName and reponse type.
+
 
 # Ribbon
-
+      It is basically client side load balancing. Ribbon has to be installed on the client side to consume the  micro             serivces.
+      For Ribbon we need to use the follwoing steps-
+      1) Add Ribbon Dependency.
+      2) Enable the @RibbonClient on the Feign proxy with the microservices that will be consume.
+      3) If we are not using the Zuul then we need to add the list of server on the properties file.
+      4) If we use the Zuul then we can skip the step 3 and add the zuul server name on the @FeignClient("Zuul-Server-Name")
+         on the Proxy.
+      
 
