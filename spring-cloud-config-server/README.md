@@ -7,6 +7,11 @@ Spring Cloud Config Server uses to maintain the celtralize the Configuration. Fo
    In this folder we have created for differnt file for each enviroment. (Dev, Test, Stage, Prod)
 2) We have a GitHub reposioty in the name "Github-Repository". And commit that folder on the GIthub.
 3) Finally we have created a Spring-Boot Application with the dependecy and configure the properties file.
+4) Dependncies we have uses here Config_server, Devtools, RabbitMQ.
+5) If any change will happen in the Local to Github repository. The reflection will not come up immediately to all the micro    services instance. That's why RabbitMQ dependency has been use.
+6) @EnableConfigServer annotation on the main server to Enable the Config Server.
+  
+
 
 
 
@@ -52,12 +57,7 @@ POM File--
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-		
-		<!-- <dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-bus-amqp</artifactId>
-		</dependency> -->
-		
+				
 		<!-- we have to use the rabbit amqp to come up the reflection -->
 		<!-- to all the micro services  on production time-->		
 		<dependency>
