@@ -203,6 +203,13 @@ RABBIT_URI=amqp://localhost java -jar zipkin-server-2.5.2-exec.jar
 -Dserver.port=8081
 
 
+# RabbitMQ
+Install and Download -- https://www.rabbitmq.com/download.html
 
+# Distributed Tracing
+
+# Feign
+
+# Ribbon
 
 
