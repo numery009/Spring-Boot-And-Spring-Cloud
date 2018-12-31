@@ -232,4 +232,39 @@ Install and Download -- https://www.rabbitmq.com/download.html
       4) If we use the Zuul then we can skip the step 3 and add the zuul server name on the @FeignClient("Zuul-Server-Name")
          on the Proxy.
       
+ # Send Request Everytime through Zuul Example
+ 
+ package com.customer.microservices.customeraccountmysql.customeraccountmysql.service;
+
+import org.springframework.cloud.netflix.ribbon.RibbonClient;
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.customer.microservices.customeraccountmysql.customeraccountmysql.bean.CustomerAccount;
+
+// To define only fiegn we will use the follwoing protocal
+// @FeignClient(name="customer-service-mysql", url="localhost:8080/api")
+
+
+// Follwoing one we use for Feign and Ribbon
+// @FeignClient(name = "customer-service-mysql")
+// @GetMapping("/api/customer")
+
+// if we want the request will go through the Zuul API between the Microservices 
+// then we need the follwoing declaration
+@FeignClient(name = "netflix-zuul-api-gateway-server")
+@RibbonClient(name = "customer-service-mysql")
+public interface CustomerAccountMysqlServiceFeignnRibbonnZuul {
+	@GetMapping("/customer-service-mysql/api/customer")
+	public CustomerAccount[] customerDetails();
+}
+
+# Fault Tolerance with Hystrix
+      Microservices architecture is number of component. Instead of one application there are lots services which are running and depending to each another. It is possible that couple of services are down. And that could cause to pull down entire chain of microservices that are dependent on them. Hystrix will help us to solve this issue. It will build the fault tolerance of the microservices. For this we need to do the follwoing steps-
+      1) Spring-Cloud-Starter-netflix-hystrix ad this dependency.
+      2) Enable the Hystrix in the main method. 
+      3) Add the annotation on the method @HystrixCommand(fallbackMethod="fallBackgetAllCustomerExample")
+      4) Create new fallback method.
+      
+
 
