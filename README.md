@@ -232,7 +232,7 @@ Install and Download -- https://www.rabbitmq.com/download.html
       4) If we use the Zuul then we can skip the step 3 and add the zuul server name on the @FeignClient("Zuul-Server-Name")
          on the Proxy.
       
- # Send Request Everytime through Zuul Example
+ # Send All Request through Zuul
  
  package com.customer.microservices.customeraccountmysql.customeraccountmysql.service;
 
