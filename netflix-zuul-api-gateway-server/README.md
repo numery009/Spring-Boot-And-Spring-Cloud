@@ -159,6 +159,9 @@ Main method we need to add the @EnableZuulProxy, @EnableDiscoveryClient and Add 
 # Application Properties
 
 --Name of the Application: spring.application.name=netflix-zuul-api-gateway-server
+
 --Port of the Server: server.port=8765
---Register the Zuul API Server in the Eureka naming Server: eureka.client.service-url.default-zone=http://localhost:8761/eureka
+
+--Register the Zuul API Server in the Eureka naming Server: 
+eureka.client.service-url.default-zone=http://localhost:8761/eureka
 
